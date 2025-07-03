@@ -36,6 +36,7 @@
       transition: background-color 0.3s ease;
       user-select: none;
       box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      color: white;
     }
     .tab:hover {
       background: #9b4dca;
@@ -45,6 +46,21 @@
       color: #3a003a;
       box-shadow: 0 6px 8px rgba(255,111,145,0.7);
     }
+
+    /* Special style for Education tab */
+    .tab.education-tab {
+      background: #ffcc00;
+      color: #3a003a;
+    }
+    .tab.education-tab:hover {
+      background: #ffdb4d;
+    }
+    .tab.education-tab.active {
+      background: #ffaa00;
+      color: #330033;
+      box-shadow: 0 6px 8px rgba(255,170,0,0.7);
+    }
+
     /* Tab content */
     .tab-content {
       display: none;
@@ -115,6 +131,7 @@
   <div class="tabs">
     <div class="tab active" data-tab="about">About Me</div>
     <div class="tab" data-tab="gallery">Gallery</div>
+    <div class="tab education-tab" data-tab="education">My Previous Education</div>
   </div>
 
   <!-- Tab Contents -->
@@ -142,6 +159,17 @@
    <img src="abc.jpg" alt="Award Photo" id="abcImage" style="display:none;" />
 
   </div>
+  
+    <!-- Education tab -->
+<div id="education" class="tab-content">
+  <h2>My Previous Education</h2>
+  <ul>
+    <li><img src="igcse.jpg" alt="IGCSE Certificate" class="cert-img" /> IGCSE at Kinablu International School, Malaysia</li>
+    <li><img src="alevel.jpg" alt="A-Level Certificate" class="cert-img" /> A-Level at Xceleration Education</li>
+    <li> Currently studying Software Engineering at UWA</li>
+  </ul>
+</div>
+
 
   <script>
     // Tab switching logic
